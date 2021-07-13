@@ -1,0 +1,6 @@
+
+I call this document the php minimum to do something handleless.
+Query mysql, print the data in index.php, edit, post and delete data.
+All very easy, there is a small example of class like a gift. I think It´s  a 
+good repository to have as a query
+everything working
