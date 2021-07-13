@@ -1,10 +1,16 @@
 <?php
 require 'config.php';
-$lista = [];
-$sql = $pdo->query("SELECT * FROM usuarios");
-if ($sql->rowCount() > 0) {
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
+require 'dao/UsuarioDaoMysql.php';
+
+$usuarioDao = new UsuarioDaoMysql($pdo);
+$lista = $usuarioDao->findAll();
+
+// $lista = [];
+// $sql = $pdo->query("SELECT * FROM usuarios");
+// if ($sql->rowCount() > 0) {
+//     $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+// }
+
 
 ?>
 
@@ -18,12 +24,12 @@ if ($sql->rowCount() > 0) {
     </tr>
     <?php foreach($lista as $item): ?>
     <tr>
-        <td><?=$item['id']; ?></td>
-        <td><?=$item['nome']; ?></td>
-        <td><?=$item['email']; ?></td>
+        <td><?=$item->getId(); ?></td>
+        <td><?=$item->getNome(); ?></td>
+        <td><?=$item->getEmail(); ?></td>
         <td>
-            <a href="editar.php?id=<?=$item['id'];?>">[ EDITAR ]</a>
-            <a href="excluir.php?id=<?=$item['id'];?>" onclick="return confirm('Tem certeza que quer excluir?')">[ EXCLUIR ]</a>
+            <a href="editar.php?id=<?=$item->getId();?>">[ EDITAR ]</a>
+            <a href="excluir.php?id=<?=$item->getId();?>" onclick="return confirm('Tem certeza que quer excluir?')">[ EXCLUIR ]</a>
         </td>
     </tr>
     <?php endforeach ?>
