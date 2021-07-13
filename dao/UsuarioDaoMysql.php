@@ -29,7 +29,19 @@ class UsuarioDaoMysql implements UsuarioDAO{
     }
 
     public function findById($id){
-
+        $sql = $this->pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
+        $sql->bindValue(':id', $id);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $data = $sql->fetch();
+            $u = new Usuario();
+            $u->setId($data['id']);
+            $u->setNome($data['nome']);
+            $u->setEmail($data['email']);
+            return $u;
+        }else{
+            return false;
+        }
     }
     public function update(Usuario $u){
         

@@ -1,7 +1,4 @@
-I couldn't contain myself and had to go a little beyond the minimum you need to make a php site
-Keep the first commit as the minimum, now I'm going over a few more commits to improve the application
-for DAO, which is a more sophisticated and more organized way of doing the same
-Here it is worth emphasizing that at the end of this committee, the rest that do not participate in the DAO continues to work
-My main users screen loads all users, but when I have to post a new one I post
-no headaches, when I have to delete or edit everything it still works like the last first commit.
-Only findAll which is in the DOM model.
+Foi feito aqui a entrada dos dados no formulario de editar, isso vem do UsuarioDaoMysql e vai para o editar
+É preciso se acostumar com esse processo de instanciar e usar o DAO.
+Não imaginava que deixar a coluna com nome de nome em portugues me trouxesse tantos problemas
+Um detalhe incomodo que vive dando problema
