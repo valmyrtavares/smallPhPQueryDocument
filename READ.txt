@@ -1,4 +1,1 @@
-Foi feito aqui a entrada dos dados no formulario de editar, isso vem do UsuarioDaoMysql e vai para o editar
-É preciso se acostumar com esse processo de instanciar e usar o DAO.
-Não imaginava que deixar a coluna com nome de nome em portugues me trouxesse tantos problemas
-Um detalhe incomodo que vive dando problema
+Nesse ponto o processo de edição está completo
